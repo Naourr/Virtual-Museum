@@ -1,0 +1,406 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: kanit;
+    src: url(assets/fonts/Kanit-Regular.ttf);
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+body {
+    overflow-x: hidden;
+    font-family: kanit;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+:root {
+    --bg-color: white;
+    --outline-color: rgb(195, 195, 195);
+    --text-color: white;
+    --color1: rgb(0, 122, 122);
+    --color2: rgb(0, 175, 175);
+}
+
+
+
+button {
+    padding: 8px 12px;
+    background-color: var(--color1);
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+    position: relative;
+    z-index: 3;
+}
+button:hover { 
+    background-color: var(--color2);
+    scale: 1.1;
+    transition: all 0.3s ease;
+}
+a {
+    text-decoration: none;
+    z-index: 1;
+}
+
+
+
+.nav-contents {
+    width: 100%;
+    background-color: var(--bg-color);
+}
+.nav-upper {
+    height: 120px;
+    width: 100%;
+    background-color: var(--bg-color);
+}
+.home-btn {
+    position: absolute;
+    top: 42px;
+    left: 50px;
+    margin-right: auto;
+    transition: all 0.3s ease;
+}
+.home-btn:hover {
+    scale: 1.1;
+    transition: all 0.3s ease;
+}
+.nav-upper h1 {
+    font-size: 2.5rem;
+}
+.nav-lower {
+    height: 70px;
+    width: 100%;
+    background-color: var(--bg-color);
+    border: 1px solid var(--outline-color);
+    justify-content: space-around;
+    gap: 1.5rem;
+    overflow-x: scroll;
+    padding: 0 1rem 0 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--outline-color) var(--bg-color);
+}
+.nav-lower a {
+    color: var(--color1);
+    font-size: 1.4rem;
+}
+.nav-lower a:hover {
+    color: var(--color2);
+}
+
+
+
+header {
+    gap: 1rem;
+}
+.banner {
+    background-color: var(--color1);
+    background-image: url(assets/images/forest-1838705_1920.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 440px;
+    width: 100%;
+}
+header .textbox {
+    padding: 3rem;
+    gap: 10px;
+    text-align: center;
+}
+header .textbox h1 {
+    font-size: 3rem;
+}
+header .textbox p {
+    font-size: 1.4rem;
+}
+
+main {
+    display: none;
+}
+.main-0 {
+    display: block;
+}
+main.active {
+    display: block;
+}
+
+
+
+
+#species-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 2rem 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.species-card {
+    background-color: var(--bg-color);
+    border-radius: 16px;
+    border: 1px solid var(--outline-color);
+    min-height: 365px;
+    min-width: 300px;
+    justify-content: space-between;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+
+}
+.species-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+.species-card .textbox {
+    height: 40%;
+    width: 100%;
+    padding: 1.4rem;
+    gap: 1rem;
+    align-items: start;
+    justify-content: space-between;
+    height: fit-content;
+}
+.species-card h3 {
+    font-size: 1.5rem;
+    color: var(--color1);
+}
+.species-card .description {
+    font-size: 0.95rem;
+    color: #555;
+}
+.species-card .picture-window {
+    height: 60%;
+    width: 100%;
+    background-color: var(--color1);
+}
+
+
+
+/* pictures for each species-card start */
+
+#mammals .picture-window {
+    background-image: url(assets/images/mammals/dog.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+#birds .picture-window {
+    background-image: url(assets/images/birds/eagle.avif);
+    background-size: cover;
+    background-position: center;
+}
+
+#reptiles .picture-window {
+    background-image: url(assets/images/reptiles/Leopard\ Gecko.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#amphibians .picture-window {
+    background-image: url(assets/images/amphibians/axolot.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#fish .picture-window {
+    background-image: url(assets/images/fish/pufferfish.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* pictures for each species-card end */
+
+
+
+/* styling for pages start */
+
+header .textbox-banner {
+    background-color: var(--color1);
+    width: 100%;
+    padding: 5rem 2rem;
+    gap: 10px;
+    text-align: center;
+}
+header .textbox-banner * {
+    color: var(--text-color);
+}
+header .textbox-banner h1 {
+    font-size: 2.8rem;
+}
+header .textbox-banner p {
+    font-size: 1.3rem;
+}
+
+.featured-animal {
+  max-width: 1000px;
+  margin: 0 auto 50px;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+.featured-animal h2 {
+    margin: 2.5rem;
+}
+.featured-card {
+  display: flex;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 5;
+}
+.featured-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+}
+.featured-card img {
+  width: 45%;
+  height: auto;
+  object-fit: cover;
+}
+.featured-card > div {
+  padding: 30px;
+  flex: 1;
+  text-align: left;
+}
+.featured-card h3 {
+  margin: 0 0 15px;
+  color: var(--color1);
+  font-size: 1.8rem;
+}
+.featured-card p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.animal-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+.animal-list h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  color: #333;
+}
+
+.animal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 0 15px;
+}
+.animal-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translateY(0);
+  text-align: center;
+  border: 1px solid var(--outline-color);
+  height: fit-content;
+  min-height: 400px;
+  position: relative;
+}
+.animal-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+.animal-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.animal-card h3 {
+  margin: 20px 15px 10px;
+  font-size: 1.4rem;
+  color: var(--color1);
+}
+.animal-card p {
+  padding: 0 20px 25px;
+  margin: 0;
+  color: #555;
+  font-size: 1rem;
+}
+.animal-card button {
+    margin-bottom: 1rem;
+}
+.card-link {
+    position: absolute;
+    /* top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; */
+    inset: 0;
+    z-index: 1;
+}
+
+/* styling for pages end */
+
+
+
+footer {
+    background-color: var(--color1);
+    text-align: left;
+    padding: 2.5rem;
+    color: var(--text-color);
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+footer > * {
+    min-width: 300px;
+}
+footer a {
+    color: var(--bg-color);
+}
+
+
+
+@media (max-width: 768px) {
+    .featured-card {
+        flex-direction: column;
+    }
+    .featured-card img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 750px) {
+    .home-btn {
+        left: 25px;
+    }
+    .nav-upper h1 {
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .home-btn {
+        top: 48px;
+    }
+    .home-btn img {
+        width: 25px;
+    }
+    .nav-upper h1 {
+        font-size: 1.8rem;
+    }
+}
