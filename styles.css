@@ -23,7 +23,7 @@
 /* FADE UP ANIMATION PARA SA WHOLE WEBSITE END */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 2rem;
+    scroll-snap-type: y proximity;
 }
 body {
     overflow-x: hidden;
@@ -62,8 +62,8 @@ button {
 }
 button:hover { 
     background-color: var(--color2);
-    scale: 1.1;
     transition: all 0.3s ease;
+    scale: 1.1;
 }
 a {
     text-decoration: none;
@@ -71,6 +71,9 @@ a {
 }
 
 
+nav {
+    scroll-snap-align: start;
+}
 
 .nav-contents {
     width: 100%;
@@ -121,6 +124,11 @@ header {
     gap: 1rem;
 }
 .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
     height: 440px;
     width: 100vw;
     overflow: hidden;
@@ -135,6 +143,7 @@ header .textbox {
     padding: 3rem;
     gap: 10px;
     text-align: center;
+    scroll-snap-align: start;
 }
 header .textbox h1 {
     font-size: 3rem;
@@ -152,6 +161,7 @@ header .textbox p {
     padding: 2rem 15px;
     max-width: 1200px;
     margin: 0 auto;
+    scroll-snap-align: start;
 }
 .era-card {
     background-color: var(--bg-color);
@@ -188,6 +198,11 @@ header .textbox p {
     color: #555;
 }
 .era-card .picture-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
     height: fit-content;
     width: 100%;
     overflow: hidden;
@@ -283,6 +298,7 @@ header .textbox-banner p {
   text-align: center;
   padding: 20px;
   font-size: 1.5rem;
+  scroll-snap-align: start;
 }
 .featured-art-form h2, .featured h2 {
     margin: 2.5rem;
@@ -328,7 +344,8 @@ header .textbox-banner p {
 .art-form-list {
   max-width: 1200px;
   margin: 0 auto;
-  padding-bottom: 2rem;
+  padding-bottom: 7rem;
+  scroll-snap-align: start;
 }
 .art-form-list h2 {
   text-align: center;
@@ -389,6 +406,29 @@ header .textbox-banner p {
 
 
 
+
+#bonus-content {
+    padding: 6rem 6rem 7rem 6rem;
+    scroll-snap-align: start;
+    min-height: 100vh;
+}
+#bonus-content .textbox {
+    gap: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.bonus-div {
+    gap: 2.5rem;
+}
+.bonus-div button {
+    margin-top: 2rem;
+}
+
+
+
+
+
+
 /* footer start */
 
 footer {
@@ -399,6 +439,7 @@ footer {
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 2rem;
+    scroll-snap-align: start;
 }
 footer > * {
     min-width: 300px;
@@ -412,7 +453,14 @@ footer a {
 
 
 /* medias start (for responsiveness) */
-
+@media screen and (max-width: 850px) {
+    .nav-upper h1 {
+        font-size: 1.4rem;
+    }
+    .nav-lower a {
+        font-size: 1rem;
+    }
+}
 @media (max-width: 768px) {
     .featured-card {
         flex-direction: column;
@@ -425,19 +473,32 @@ footer a {
     .home-btn {
         left: 25px;
     }
-    .nav-upper h1 {
-        font-size: 2rem;
+    .theme-toggle {
+        right: 25px;
     }
+    .nav-upper h1 {
+        font-size: 1.3rem;
+    }
+    .nav-lower a {
+        font-size: 1rem;
+    }
+
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     .home-btn {
         top: 48px;
+    }
+    .theme-toggle {
+        font-size: 1rem;
     }
     .home-btn img {
         width: 25px;
     }
     .nav-upper h1 {
-        font-size: 1.8rem;
+        font-size: 1rem;
+    }
+    .nav-lower a {
+        font-size: .7rem;
     }
 }
 
