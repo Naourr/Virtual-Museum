@@ -405,8 +405,6 @@ header .textbox-banner p {
 /* styling for era-pages end */
 
 
-
-
 #bonus-content {
     padding: 6rem 6rem 7rem 6rem;
     scroll-snap-align: start;
@@ -417,16 +415,16 @@ header .textbox-banner p {
     margin-bottom: 2rem;
     text-align: center;
 }
+#bonus-content .featured-card > img {
+    width: 50%;
+    aspect-ratio: 1/1;
+}
 .bonus-div {
-    gap: 2.5rem;
+    gap: 3rem;
 }
 .bonus-div button {
     margin-top: 2rem;
 }
-
-
-
-
 
 
 /* footer start */
