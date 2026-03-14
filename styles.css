@@ -313,7 +313,7 @@ header .textbox-banner p {
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 1500px;
+  max-width: 1000px;
   margin: 0 auto;
   z-index: 5;
 }
@@ -372,7 +372,6 @@ header .textbox-banner p {
   text-align: left;
   border: 1px solid var(--outline-color);
   height: fit-content;
-  min-height: 400px;
   position: relative;
   padding-bottom: 1rem;
 }
@@ -513,6 +512,11 @@ footer a {
     }
     .nav-lower a {
         font-size: .7rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    .art-form-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 
