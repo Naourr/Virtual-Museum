@@ -292,6 +292,10 @@ header .textbox-banner p {
 }
 
 
+
+
+
+
 .featured-art-form, .featured {
   max-width: 1000px;
   margin: 0 auto 50px;
@@ -309,7 +313,7 @@ header .textbox-banner p {
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 800px;
+  max-width: 1500px;
   margin: 0 auto;
   z-index: 5;
 }
@@ -354,7 +358,7 @@ header .textbox-banner p {
 
 .art-form-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 30px;
   padding: 0 2rem;
 }
@@ -365,12 +369,12 @@ header .textbox-banner p {
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   transform: translateY(0);
-  text-align: center;
+  text-align: left;
   border: 1px solid var(--outline-color);
   height: fit-content;
   min-height: 400px;
   position: relative;
-  padding-bottom: 1.3rem;
+  padding-bottom: 1rem;
 }
 .art-form-card:hover {
   transform: translateY(-12px);
@@ -378,13 +382,14 @@ header .textbox-banner p {
 }
 .art-form-card img {
   width: 100%;
-  aspect-ratio: 5/4;
+  aspect-ratio: 7/4;
   object-fit: cover;
 }
 .art-form-card h3 {
   margin: 1rem;
-  font-size: 1.4rem;
+  font-size: 2rem;
   color: var(--color1);
+    text-align: center;
 }
 .art-form-card p {
   padding: 0 20px 25px;
@@ -393,7 +398,8 @@ header .textbox-banner p {
   font-size: 1rem;
 }
 .art-form-card button {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
 }
 .card-link {
     position: absolute;
@@ -424,6 +430,13 @@ header .textbox-banner p {
 .bonus-div button {
     margin-top: 2rem;
 }
+
+
+
+.art-form-page p {
+    font-size: 0.95rem;
+}
+
 
 
 /* footer start */
