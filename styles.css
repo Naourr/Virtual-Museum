@@ -503,7 +503,7 @@ footer span {
     .featured-card {
         width: 100%;
     }
-    .featured-card > img {
+    .featured-card > img, .featured-card > video {
         width: 100%;
         aspect-ratio: 5/3;
     }
