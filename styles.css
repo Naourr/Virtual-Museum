@@ -23,7 +23,6 @@
 /* FADE UP ANIMATION PARA SA WHOLE WEBSITE END */
 html {
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
 }
 body {
     overflow-x: hidden;
@@ -69,12 +68,6 @@ a {
     text-decoration: none;
     z-index: 1;
 }
-
-
-nav {
-    scroll-snap-align: start;
-}
-
 .nav-contents {
     width: 100%;
     background-color: var(--bg-color);
@@ -117,9 +110,6 @@ nav {
 .nav-lower a:hover {
     color: var(--color2);
 }
-
-
-
 header {
     gap: 1rem;
 }
@@ -143,7 +133,6 @@ header .textbox {
     padding: 3rem;
     gap: 10px;
     text-align: center;
-    scroll-snap-align: start;
 }
 header .textbox h1 {
     font-size: 3rem;
@@ -151,9 +140,6 @@ header .textbox h1 {
 header .textbox p {
     font-size: 1.4rem;
 }
-
-
-
 #era-board {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -161,7 +147,6 @@ header .textbox p {
     padding: 2rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    scroll-snap-align: start;
 }
 
 .era-card {
@@ -295,11 +280,6 @@ header .textbox-banner p {
     font-size: 1.3rem;
 }
 
-
-
-
-
-
 .featured-art-form, .featured {
   max-width: 1000px;
   margin: 0 auto 50px;
@@ -416,7 +396,6 @@ header .textbox-banner p {
 
 #bonus-content {
     padding: 6rem 2rem 7rem 2rem;
-    scroll-snap-align: start;
     min-height: 100vh;
 }
 #bonus-content h1 {
@@ -440,10 +419,8 @@ header .textbox-banner p {
 }
 .bonus-details {
     align-self: left;
-    scroll-snap-align: start;
     padding-top: 3rem;
 }
-
 
 .audio-container {
     position: absolute;
@@ -461,9 +438,6 @@ iframe {
     aspect-ratio: 16/9;
 }
 
-
-
-
 /* footer start */
 
 footer {
@@ -476,7 +450,6 @@ footer {
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 2rem;
-    scroll-snap-align: start;
 }
 footer > div {
     gap: 10px;
