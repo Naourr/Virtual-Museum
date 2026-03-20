@@ -68,6 +68,12 @@ a {
     text-decoration: none;
     z-index: 1;
 }
+p {
+    text-align: justify;
+}
+header p, .textbox p {
+    text-align: center;
+}
 .nav-contents {
     width: 100%;
     background-color: var(--bg-color);
