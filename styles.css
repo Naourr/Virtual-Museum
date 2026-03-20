@@ -42,7 +42,7 @@ body {
 }
 :root {
     --bg-color: white;
-    --outline-color: rgb(195, 195, 195);
+    --outline-color: rgb(180, 180, 180);
     --text-color: white;
     --color1: rgb(177, 142, 45);
     --color2: rgb(136, 104, 0);
@@ -96,11 +96,13 @@ a {
     width: 100%;
     background-color: var(--bg-color);
     border: 1px solid var(--outline-color);
+    border-left-width: 0;
+    border-right-width: 0;
     justify-content: space-around;
     gap: 1.5rem;
     overflow-x: scroll;
     padding: 0 1rem 0 1rem;
-    scrollbar-width: thin;
+    scrollbar-width: none;
     scrollbar-color: var(--outline-color) var(--bg-color);
 }
 .nav-lower a {
@@ -202,9 +204,9 @@ header .textbox p {
 /* DARK MODE START */
 
 [data-theme="dark"] {
-    --bg-color: #1a1a1a;
-    --outline-color: rgb(70, 70, 70);
-    --text-color: #f0f0f0;
+    --bg-color: #000000;
+    --outline-color: rgb(80, 80, 80);
+    --text-color: rgb(56, 56, 56);
     --color1: rgb(210, 170, 60);
     --color2: rgb(177, 142, 45);
 }
@@ -415,7 +417,7 @@ header .textbox-banner p {
 #bonus-content span {
     margin-left: 1rem;
     font-size: 1.3rem;
-    color: var(--text-color);
+    color: var(--color2);
 }
 .bonus-details {
     align-self: left;
